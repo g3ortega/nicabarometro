@@ -40,6 +40,7 @@ GEM
       nori
       tzinfo (>= 0.3.14)
       virtus (>= 1.0.0)
+    bcrypt (3.1.7)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -48,6 +49,7 @@ GEM
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
     builder (3.1.4)
+    cancancan (1.8.0)
     choc_mool (0.0.1)
     coderay (1.1.0)
     coercible (1.0.0)
@@ -62,6 +64,12 @@ GEM
     debug_inspector (0.0.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -87,6 +95,7 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nori (2.4.0)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -151,6 +160,8 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0.3)
       equalizer (~> 0.0.9)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -160,7 +171,9 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.1.1)
+  cancancan
   coffee-rails (~> 4.0.0)
+  devise
   jbuilder (~> 1.2)
   jquery-rails
   pg
