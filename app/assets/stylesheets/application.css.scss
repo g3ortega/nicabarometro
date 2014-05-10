@@ -15,3 +15,18 @@
 @import 'bootswatch-scss/flatly/variables';
 @import "bootstrap-sass-official";
 @import 'bootswatch-scss/flatly/bootswatch';
+
+.navbar-inverse {
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  .container .jumbotron {
+    text-align: center;
+  }
+}
+
