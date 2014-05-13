@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  condition: MyString
+  ends_at: 2014-05-12 18:16:08
+  high: 1.5
+  low: 1.5
+  icon: MyString
+  pop: 1.5
+  starts_at: 2014-05-12 18:16:08
+  sun_rise: 2014-05-12 18:16:08
+  sun_set: 2014-05-12 18:16:08
+
+two:
+  condition: MyString
+  ends_at: 2014-05-12 18:16:08
+  high: 1.5
+  low: 1.5
+  icon: MyString
+  pop: 1.5
+  starts_at: 2014-05-12 18:16:08
+  sun_rise: 2014-05-12 18:16:08
+  sun_set: 2014-05-12 18:16:08

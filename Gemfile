@@ -5,7 +5,9 @@ source 'https://rails-assets.org'
 gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'pg', group: :production
+
+gem 'sqlite3', group: :development
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -50,6 +52,9 @@ end
 #Autenticación
 gem 'devise'
 gem 'cancancan'
+
+#Email Delivery
+gem 'mandrill-api'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

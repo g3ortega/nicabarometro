@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  condition: MyString
+  dew_point: 1.5
+  heat_index: 1.5
+  humidity: 1.5
+  icon: MyString
+  observed_at: 2014-05-12 18:03:56
+  pressure: 1.5
+  stale_at: 2014-05-12 18:03:56
+  temperature: 1.5
+  visibility: 1.5
+  wind: 1.5
+
+two:
+  condition: MyString
+  dew_point: 1.5
+  heat_index: 1.5
+  humidity: 1.5
+  icon: MyString
+  observed_at: 2014-05-12 18:03:56
+  pressure: 1.5
+  stale_at: 2014-05-12 18:03:56
+  temperature: 1.5
+  visibility: 1.5
+  wind: 1.5
