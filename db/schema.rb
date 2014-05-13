@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513001608) do
+ActiveRecord::Schema.define(version: 20140513045538) do
+
+  create_table "departments", force: true do |t|
+    t.string   "name"
+    t.string   "query"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "forecasts", force: true do |t|
     t.string   "condition"
@@ -25,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140513001608) do
     t.time     "sun_set"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "department_id"
   end
 
   create_table "users", force: true do |t|
@@ -52,12 +60,13 @@ ActiveRecord::Schema.define(version: 20140513001608) do
     t.float    "humidity"
     t.string   "icon"
     t.float    "pressure"
-    t.datetime "stale_at"
+    t.string   "stale_at"
     t.float    "temperature"
     t.float    "visibility"
     t.float    "wind"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "department_id"
   end
 
 end
