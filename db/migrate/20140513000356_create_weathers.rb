@@ -8,7 +8,7 @@ class CreateWeathers < ActiveRecord::Migration
       t.string :icon
       # t.datetime :observed_at
       t.float :pressure
-      t.datetime :stale_at
+      t.string :stale_at
       t.float :temperature
       t.float :visibility
       t.float :wind
