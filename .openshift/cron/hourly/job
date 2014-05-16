@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd $OPENSHIFT_REPO_DIR && bundle exec rake captureweather:forecast
-cd $OPENSHIFT_REPO_DIR && bundle exec rake captureweather:current_weather
+cd $OPENSHIFT_REPO_DIR && RAILS_ENV=production bundle exec rake captureweather:forecast
+cd $OPENSHIFT_REPO_DIR && RAILS_ENV=production bundle exec rake captureweather:current_weather
