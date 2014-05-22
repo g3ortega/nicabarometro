@@ -56,6 +56,9 @@ gem 'cancancan'
 #Email Delivery
 gem 'mandrill-api'
 
+#For data visualization
+gem 'd3-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

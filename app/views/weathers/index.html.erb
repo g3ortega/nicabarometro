@@ -1,3 +1,9 @@
-<h1>This is weather!</h1>
+<h1>Estado actual del clima para <%= @weather.department.name %> </h1>
 
-<%= @weather.temperature %>
+<ul>
+  <li>Temperatura: <%= @weather.temperature %></li>
+  <li>Humedad: <%= @weather.humidity.to_i %> %</li>
+</ul>
+
+
+
