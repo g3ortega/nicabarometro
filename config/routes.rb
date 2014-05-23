@@ -1,6 +1,10 @@
 Nicabarometro2::Application.routes.draw do
+  get "departments/index"
   devise_for :users
   get "weathers/index"
+  # get 'usuarios' => 'users#index'
+  resources :usuarios, :controller => "users", :as => "users"
+  # resource :users, as: :usuarios
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

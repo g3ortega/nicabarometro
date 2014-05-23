@@ -19,7 +19,23 @@
           <ul class="nav navbar-nav">
             <li><a href="#">Alertas</a></li>
             <li><%= link_to 'Consultar Historial', historial_path %></li>
+            <li class="dropdown navbar-right">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                    <li><%= link_to current_user.name, edit_user_registration_path  %></li>
+                    <li class="divider"></li>
+                    <li>
+
+                      <%= link_to t("nav.sign_out_link"), destroy_user_session_path, method: :delete %>
+                    </li>
+                <% else %>
+                    <li><%= link_to t("nav.sign_in_link"), new_user_session_path %></li>
+                <% end %>
+              </ul>
+            </li>
           </ul>
+
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
       </div>
