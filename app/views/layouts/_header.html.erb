@@ -1,45 +1,35 @@
-<div class="navbar-wrapper">
-  <div class="container">
+<div class="container-fluid head-bar">
+  <%= image_tag("topbg.png")%>
+</div>
 
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to 'Nicabarómetro', root_path, :class => "navbar-brand" %>
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+  <h3>Menu</h3>
+  <a><%= link_to 'Nicabarómetro', root_path %></a>
+  <a href="#">Alertas</a>
+  <a><%= link_to 'Historial', historial_path %></a>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <% if user_signed_in? %>
+          <li><%= link_to current_user.name, edit_user_registration_path  %></li>
+          <li class="divider"></li>
+          <li>
 
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Alertas</a></li>
-            <li><%= link_to 'Consultar Historial', historial_path %></li>
-            <li class="dropdown navbar-right">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <% if user_signed_in? %>
-                    <li><%= link_to current_user.name, edit_user_registration_path  %></li>
-                    <li class="divider"></li>
-                    <li>
-
-                      <%= link_to t("nav.sign_out_link"), destroy_user_session_path, method: :delete %>
-                    </li>
-                <% else %>
-                    <li><%= link_to t("nav.sign_in_link"), new_user_session_path %></li>
-                <% end %>
-              </ul>
-            </li>
-          </ul>
-
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-      </div>
+            <%= link_to t("nav.sign_out_link"), destroy_user_session_path, method: :delete %>
+          </li>
+      <% else %>
+          <li><%= link_to t("nav.sign_in_link"), new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </li>
+</nav>
+<div class="container chead">
+  <div class="row">
+    <div class="col-md-1">
+      <span id="showLeftPush" class="btn btn-info menu"><%= image_tag("menu.png") %></span>
     </div>
-
+    <div class="col-md-11">
+      <h3>Nica-Barómetro</h3>
+    </div>
   </div>
-
+</div>
