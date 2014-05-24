@@ -6,19 +6,60 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="cbp-spmenu-push">
 
-<%= render 'layouts/header' %>
-<div class="container">
+  <%= render 'layouts/header' %>
+  <div class="container">
   <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <%= value %></div>
-  <% end %>
-  <%= yield %>
-</div>
+        <div class="alert alert-<%= key %>">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <%= value %></div>
+    <% end %>
+    <%= yield %>
+  </div>
+  <figure class="icons">
+        <canvas id="clear-day" width="64" height="64">
+        </canvas>
+  </figure>
 
 
+  <script>
+      var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+        menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        showLeftPush = document.getElementById( 'showLeftPush' ),
+        showRightPush = document.getElementById( 'showRightPush' ),
+        body = document.body;
 
+      
+      showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeftPush' );
+      };
+
+      function disableOther( button ) {        
+        if( button !== 'showLeftPush' ) {
+          classie.toggle( showLeftPush, 'disabled' );
+        }
+        if( button !== 'showRightPush' ) {
+          classie.toggle( showRightPush, 'disabled' );
+        }
+      }
+  </script>
+  <script>
+      var icons = new Skycons(),
+          list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+      for(i = list.length; i--; )
+        icons.set(list[i], list[i]);
+
+      icons.play();
+    </script>
 </body>
 </html>
