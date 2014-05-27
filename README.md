@@ -30,5 +30,15 @@ The app has been built to be deployed to OpenShift. First of all, i suggest to r
     
     $ rhc cartridge add cron-1.4 -a nicabarometro
  
+========================
+
+#Todo List
+
+*Firefox Port => Add-On
+*Chrome Port => Desktop, Extension
+*Mobile Port.
+*Dominio Propio.
+
+
 
 
