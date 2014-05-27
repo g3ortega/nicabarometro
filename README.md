@@ -6,8 +6,8 @@ This is a simple app built with Rails for educational purpose. We try to show so
 
 ### First time
 
-The app use some rake task to get info from the weather API, so you need run rake tasks to get the data or update it. 
-TODO: Include rake:tasks
+The app use some rake task to get info from the weather API, so you need run rake task capturedata to get the data or update it.
+    $ rake capturedata:all
 
 ## Deployment
 

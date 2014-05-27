@@ -1,8 +1,15 @@
+<h2>RIGHT NOW!</h2>
+<figure class="icons">
+  <canvas id="<%= @weather.icon %>" width="84" height="84">
+  </canvas>
+</figure>
+
 <h1>Estado actual del clima para <%= @weather.department.name %> </h1>
 
 <ul>
   <li>Temperatura: <%= @weather.temperature %></li>
   <li>Humedad: <%= @weather.humidity.to_i %> %</li>
+
 </ul>
 
 
